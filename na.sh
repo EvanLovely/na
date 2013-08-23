@@ -18,7 +18,7 @@
 
 # NA_TODO_EXT Must be set to something to limit text searches
 NA_TODO_EXT="taskpaper"
-NA_NEXT_TAG="@na"
+NA_NEXT_TAG="-"
 NA_DONE_TAG="@done"
 NA_MAX_DEPTH=3
 NA_AUTO_LIST_FOR_DIR=1 # or 0 to disable
@@ -164,7 +164,7 @@ SCRIPTTIME
         CHKFILES=$(ls -C1 $target/*.$NA_TODO_EXT 2> /dev/null | wc -l)
         if [ $CHKFILES -ne 0 ]; then
           echo -e "$DKGRAY[$target]:$GREEN"
-          echo -e "$(grep -h "$NA_NEXT_TAG" "$target"/*.$NA_TODO_EXT | \
+          echo -e "$(grep -h -m1 "$NA_NEXT_TAG" "$target"/*.$NA_TODO_EXT | \
             grep -v "$NA_DONE_TAG" | \
             awk '{gsub(/(^[ \t]+| '"$NA_NEXT_TAG"')/, "")};1' | \
             sed -e "s/\(@[^ ]*\)/\\$CYAN\1\\$GREEN/g")"

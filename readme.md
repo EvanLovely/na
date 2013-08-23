@@ -1,3 +1,13 @@
+# My Modifications
+
+Instead of looking for actions that are tagged `@na` and listing **all** of them, I wanted this to find the very next action to do. This looks for items with a `-` on the line, what TaskPaper uses to denote a task (I'm sure I'll see some false positives down the road, but whatever) and show me only the top item. I didn't like to see all of them; I think it's nice to not scare yourself with a big task list on a project. 
+
+Many thanks to [Brett Terpstra's original work](http://brettterpstra.com/projects/na) on this! His instructions follow:
+
+---
+
+# Original Read Me
+
 `na` is a bash function designed to make it easy to see what your next actions are for any project, right from the command line. It works with TaskPaper-format files (but any plain text format will do), looking for @na tags (or whatever you specify) in todo files in your current folder. It can also auto-display next actions when you enter a project directory, automatically locating any todo files and listing their next actions when you `cd` to the project (optionally recursive).
 
 ### Features

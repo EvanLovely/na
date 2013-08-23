@@ -2,6 +2,8 @@
 
 Instead of looking for actions that are tagged `@na` and listing **all** of them, I wanted this to find the very next action to do. This looks for items with a `-` on the line, what TaskPaper uses to denote a task (I'm sure I'll see some false positives down the road, but whatever) and show me only the top item. I didn't like to see all of them; I think it's nice to not scare yourself with a big task list on a project. 
 
+I added an Alfred Workflow as well for anyone interested. Edit the 'Run Script' action to point to your script.
+
 Many thanks to [Brett Terpstra's original work](http://brettterpstra.com/projects/na) on this! His instructions follow:
 
 ---
